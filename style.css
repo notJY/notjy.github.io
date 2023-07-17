@@ -1,0 +1,118 @@
+.page {
+    width: 80vw;
+    height: auto;
+    border: 1px solid black;
+}
+
+nav ul li {
+    display: block;
+}
+
+/*#page1 {
+    background: red
+}
+
+#page2 {
+    background: green
+}
+
+#page3 {
+    background: blue
+}*/
+
+/*for responsive menu*/
+#menu {
+    display: none;
+}
+
+
+#menuList.menuShow {
+    display: flex;
+}
+
+#menuList > li {
+    margin: auto 30px auto 30px;
+}
+
+body {
+    background-color: saddlebrown;  
+    text-align: center;
+    color: white;
+}
+
+#tree {
+    height: 50px;
+    width: 50px;
+}
+
+h1 {
+    display: inline-flex;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px groove white;
+    margin: auto 150px 10px 150px;
+}
+
+button {
+    background-color: saddlebrown;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+
+button:hover {
+    color: skyblue;
+    cursor: pointer;
+}
+
+#pagecontainer {
+    display: inline-flex;
+    background-color: green;
+}
+
+@media screen and (max-width:800px) {
+    nav ul li {
+        display: block;
+    }
+    /*make a menu items vertical*/
+    #menu {
+        display: block;
+        background-color: saddlebrown;
+        border: 1px solid black;
+        color: white;
+    }
+
+    #menu:hover {
+        color: skyblue;
+    }
+
+    #menuList {
+        text-align: initial;
+    }
+    /* unhide menu icon */
+    nav ul {
+        display: none;
+    }
+    /*hide the menu item list*/
+}
+
+/*Images*/
+#pagecontainer > div > div > img {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+}
+
+#pagecontainer > div > div {
+    display: inline-flex;
+    border-top: 3px double black;
+    border-bottom: 3px double black;
+}
+
+#pagecontainer > div > div > div {
+    margin: 50px;
+}
