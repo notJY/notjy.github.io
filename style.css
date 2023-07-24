@@ -4,6 +4,16 @@
     border: 1px solid black;
 }
 
+/*QR code*/
+#qr {
+    width: 100px;
+    height: 100px;
+}
+
+#code {
+    flex-direction: column;
+}
+
 /*Top menu*/
 nav ul li {
     display: block;
