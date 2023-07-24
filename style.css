@@ -4,27 +4,15 @@
     border: 1px solid black;
 }
 
+/*Top menu*/
 nav ul li {
     display: block;
 }
-
-/*#page1 {
-    background: red
-}
-
-#page2 {
-    background: green
-}
-
-#page3 {
-    background: blue
-}*/
 
 /*for responsive menu*/
 #menu {
     display: none;
 }
-
 
 #menuList.menuShow {
     display: flex;
@@ -40,6 +28,7 @@ body {
     color: white;
 }
 
+/*Tree on top left*/
 #tree {
     height: 50px;
     width: 50px;
@@ -47,7 +36,6 @@ body {
 
 h1 {
     display: inline-flex;
-
 }
 
 nav {
@@ -71,17 +59,178 @@ button:hover {
 
 #pagecontainer {
     display: inline-flex;
-    background-color: green;
+    background-color: green;    
 }
 
+/*images*/
+#pagecontainer > div > div > img {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+}
+
+#pagecontainer > div > div {
+    display: inline-flex;
+    border-top: 3px double black;
+    border-bottom: 3px double black;
+}
+
+#pagecontainer > div > div > div {
+    margin: 50px;
+}
+
+/*Page 1*/
+#bigtree {
+    width: 100%;
+    height: 1000px;
+    
+    z-index: -1;
+}
+
+/*Content*/
+.info {
+    display: none;
+}
+
+/*Circle buttons*/
+.tbutton {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    border: 4px solid black;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#leafButton {
+    top: 40%;
+    left: 50%;
+}
+
+#branchButton {
+    top: 70%;
+    left: 48%;
+}
+
+#trunkButton {
+    top: 100%;
+    left: 50%;
+}
+
+#rootButton {
+    top: 130%;
+    left: 53%;
+}
+
+/*Page 2*/
+
+#page2 > p {
+    padding: 20px;
+}
+
+
+/*Timeline*/
+.timeline {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/*Container around content*/
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+}
+
+/*Circles on the timeline*/
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid black;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/*Left container*/
+.left {
+    left: -42.5%;
+}
+
+/*Right container*/
+.right {
+    left: 42%;
+}
+
+/*Add arrows to left and right containers*/
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+/*Content*/
+.content {
+    padding: 20px 30px;
+    background-color: black;
+    position: relative;
+    border-radius: 6px;
+    width: 410px;
+}
+
+/*Responsive web design*/
 @media screen and (max-width:800px) {
+    /*Top menu*/
     nav ul li {
         display: block;
     }
     /*make a menu items vertical*/
     #menu {
         display: block;
-        background-color: saddlebrown;
         border: 1px solid black;
         color: white;
     }
@@ -97,22 +246,43 @@ button:hover {
     nav ul {
         display: none;
     }
-    /*hide the menu item list*/
-}
 
-/*Images*/
-#pagecontainer > div > div > img {
-    width: 200px;
-    height: 200px;
-    margin: 30px;
-}
+    #menuList.menuShow {
+        display: block;
+        position: absolute;
+        padding-left: 1px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        top: 10%;
+        left: 59%;
+    }
 
-#pagecontainer > div > div {
-    display: inline-flex;
-    border-top: 3px double black;
-    border-bottom: 3px double black;
-}
+    #menuList > li > button {
+        width: 150px;
+        height: 25px;
+    }
+    
+    /*Page 1*/
+    #bigtree {
+        height: 750px;
+    }
 
-#pagecontainer > div > div > div {
-    margin: 50px;
+    .tbutton {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+    }
+
+    /*Page 2*/
+    .content {
+        width: 200px;
+    }
+
+    .left {
+        left: -39%;
+    }
+
+    .right {
+        left: 38.5%;
+    }
 }
